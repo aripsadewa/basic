@@ -24,9 +24,25 @@ class Navbar extends Component
     public function render()
     {
         $navbar = [
-            'Home' => '/',
-            'About' => '/about'
+            [
+                'menu' => 'Home',
+                'url' => '/',
+                'name' => 'home'
+            ],
+            [
+                'menu' => 'About',
+                'url' => '/about',
+                'name' => 'about'
+            ],
+            [
+                'menu' => 'Post',
+                'url' => '/posts',
+                'name' => 'posts'
+            ]
+            // 'Home' => '/',
+            // 'About' => '/about'
         ];
+        // dd($navbar);
 
         return view('layouts.navbar', compact('navbar'));
     }

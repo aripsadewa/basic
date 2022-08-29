@@ -11,4 +11,11 @@ class PostController extends Controller
         // $post = Post::where('slug', $slug)->firstOrFail();
         return view('posts.show', compact('post'));
     }
+
+    public function index()
+    {
+        return view('posts.index', [
+            'posts' => Post::latest()->simplePaginate(10),
+        ]);
+    }
 }
