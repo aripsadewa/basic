@@ -1,3 +1,5 @@
 <x-app-layout>
-    About
+    <div class="container">
+        About
+    </div>
 </x-app-layout>

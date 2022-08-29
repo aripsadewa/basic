@@ -1,5 +1,5 @@
 <x-app-layout title="Home">
-{{-- @component('components.alert')
+    {{-- @component('components.alert')
         @slot('title')
             header slot
         @endslot
@@ -8,7 +8,7 @@
         footer slot
         @endslot
     @endcomponent --}}
-    Home Page
+    <div class="container">
+        Home Page
+    </div>
 </x-app-layout>
-
-
