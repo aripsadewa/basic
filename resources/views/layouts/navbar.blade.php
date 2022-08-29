@@ -7,7 +7,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            @foreach ($navbar as $key => $nav)
+            @foreach ($navbar as $nav)
                 <li class="nav-item{{ request()->is($nav['name']) ? ' active' : '' }}">
                     <a class="nav-link" href="{{ $nav['url'] }}">{{ $nav['menu'] }}</a>
                 </li>

@@ -27,7 +27,7 @@ class Navbar extends Component
             [
                 'menu' => 'Home',
                 'url' => '/',
-                'name' => 'home'
+                'name' => '/'
             ],
             [
                 'menu' => 'About',
