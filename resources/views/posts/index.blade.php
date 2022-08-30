@@ -1,10 +1,18 @@
 <x-app-layout title="Posts">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="d-flex justify-content-between">
+            <div>
                 <h4>All Post</h4>
-                @foreach ($posts as $post)
-                    <div class="card mb-3">
+                <hr>
+            </div>
+            <div>
+                <a href="/posts/create" class="btn btn-primary">New Post</a>
+            </div>
+        </div>
+        <div class="row">
+            @foreach ($posts as $post)
+                <div class="col-md-4">
+                    <div class="card mb-4">
                         <div class="card-header">
                             {{ $post->title }}
                         </div>
@@ -18,11 +26,15 @@
                             Published on {{ $post->created_at->diffForHumans() }}
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
 
         </div>
-        {{ $posts->links() }}
+        <div class="d-flex justify-content-center">
+            <div>
+                {{ $posts->links() }}
+            </div>
+        </div>
 
     </div>
 </x-app-layout>
