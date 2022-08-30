@@ -15,7 +15,12 @@ class PostController extends Controller
     public function index()
     {
         return view('posts.index', [
-            'posts' => Post::latest()->simplePaginate(10),
+            'posts' => Post::latest()->simplePaginate(6),
         ]);
+    }
+
+    public function create()
+    {
+        return view('posts.create');
     }
 }
